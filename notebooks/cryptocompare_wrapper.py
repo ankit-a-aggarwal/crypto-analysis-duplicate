@@ -2,8 +2,6 @@
 #
 # A Python wrapper for https://min-api.cryptocompare.com/
 #
-# Created on:       03/03/2018  Aditya Shirode
-# Last modified:    03/03/2018  Aditya Shirode
 #
 
 import time
@@ -59,6 +57,7 @@ def get_url(query_name, **kwargs):
                 query_arguments.append("{argument}={value}".format(argument=argument, value=format_parameter(value)))
 
     query = query_url + '?' + '&'.join(query_arguments)
+    #print(query)
     return query
 
 
@@ -66,6 +65,7 @@ def query_cryptocompare(url):
     """ Query CryptoCompare API """
     try:
         response = requests.get(url).json()
+        #print(response)
     except Exception as e:
         logging.error("Failure while querying {query}. \n{err}".format(query=url, err=e))
         return None
@@ -82,7 +82,8 @@ def query_cryptocompare(url):
 def convert_timestamp(timestamp):
     """ Convert timestamp into readable datetime """
     try:
-        return datetime.datetime.fromtimestamp(int(timestamp)).strftime('%d-%m-%Y %H:%M:%S')
+        #return datetime.datetime.fromtimestamp(int(timestamp)).strftime('%d-%m-%Y %H:%M')
+        return timestamp
     except Exception as e:
         logging.debug(e)
         return None
@@ -98,11 +99,17 @@ def get_data(response):
 def get_readable_df(response):
     """ Extract data from given response and return a dataframe """
     header, data = get_data(response)
+    if data is None:
+        return None
     try:
         df_data = pd.DataFrame(data)
-        df_data = df_data.rename(columns={'time': 'timestamp'})
-        df_data['time'] = df_data.timestamp.apply(convert_timestamp)
-        df_data = df_data.set_index('time')
+        #print(df_data.columns)
+        df_data = df_data.rename(columns={'time': 'unix_timestamp'})
+        #df_data['time'] = df_data.timestamp.apply(convert_timestamp)
+        if 'unix_timestamp' in df_data:
+            df_data = df_data.set_index('unix_timestamp')
+        else:
+            return None
     except AttributeError as e:
         logging.debug(e)
         return None
