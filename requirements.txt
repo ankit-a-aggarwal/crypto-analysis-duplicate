@@ -1,0 +1,11 @@
+﻿APScheduler==3.5.1
+ccxt==1.14.119
+configparser==3.5.0
+numpy==1.14.3
+pandas==0.22.0
+pylint==1.8.4
+pymongo==3.6.1
+pyti==0.2.2
+PyYAML==3.12
+scipy==1.0.1
+TA-Lib==0.4.17
