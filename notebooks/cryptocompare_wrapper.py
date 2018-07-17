@@ -196,6 +196,8 @@ def get_historical_price_day(coin, to_curr=CURR, timestamp=time.time(), exchange
             **kwargs
         )
     )
+    if resp is None:
+        return None
     df =  get_readable_df(resp)
     #df['coin'] = coin
     #print("Coin inserted in Dataframe")
