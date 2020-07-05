@@ -1,5 +1,5 @@
 # Crypto Analyzer 
-Check out the [link](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/CryptoAnalysis_1.0_D.ipynb )  for code. (Code will not work because [cryptocompare](cryptocompare.com) bas changed the free-API endpoints since the code's implementation.)
+Check out the [link](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/CryptoAnalysis_1.0_D.ipynb )  for code. (Code will not work because [cryptocompare](cryptocompare.com) has changed the free-API endpoints since the code's implementation.)
 
 
 I [**formulated and prioritised requirements**](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/CryptoAnalysis_1.0_D.ipynb#TO-DO:), built a low-frequency cryptocurrency trading system using the [CCXT API](https://github.com/ccxt/ccxt) and [cryptocompare API](https://min-api.cryptocompare.com/). 
