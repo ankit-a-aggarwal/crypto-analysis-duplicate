@@ -17,3 +17,5 @@ Added Cron-Jobs which would periodically download market data from the exchange 
 
 Formed trading rules using [technical indicators,past trades and order book](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/Order_Book_and_Past_Trade_Analysis_D.ipynb) such as Moving Averages(Moving Averages Cross-Over technique), Relative Strength Index(RSI) to spot trending patterns and Bollinger Bands to spot mean-reverting patterns.
 
+I also experimented with intra-day trading (wrote code to spot mean-reverting prices) using [Bollinger Bands and WebSocket Real Time Code](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/BTC_USD_Streaming_D.ipynb?flush_cache=true)
+
