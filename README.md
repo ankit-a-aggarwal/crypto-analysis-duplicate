@@ -16,5 +16,4 @@ Added Cron-Jobs which would periodically download market data from the exchange 
 [Automated the data download and the technical analysis parts.](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/CryptoAnalysis_1.0_D.ipynb#Since-Crypto-Markets-are-24-hours,-the-current-candle-may-be-incomplete,until-the-candle-is-closed.-So-delete-the-last-row-for-each-coin-exchange-time_period-combination-and-download-OHLCV-data-from-the-last-row-in-the-CSV/table-after-deletion-to-the-current-timestamp.)
 
 Formed trading rules using [technical indicators,past trades and order book](https://nbviewer.jupyter.org/github/ankit-a-aggarwal/crypto-analysis/blob/master/notebooks/Order_Book_and_Past_Trade_Analysis_D.ipynb) such as Moving Averages(Moving Averages Cross-Over technique), Relative Strength Index(RSI) to spot trending patterns and Bollinger Bands to spot mean-reverting patterns.
-"# crypto-analysis"
 
