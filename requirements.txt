@@ -1,7 +1,7 @@
 ﻿APScheduler==3.5.1
 ccxt==1.14.119
 configparser==3.5.0
-numpy==1.14.3
+numpy==1.22.0
 pandas==0.22.0
 pylint==1.8.4
 pymongo==3.6.1
